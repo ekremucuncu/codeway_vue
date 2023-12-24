@@ -1,15 +1,9 @@
 <script>
 import router from '../main'
-import { signup, signin } from '../firebase/firebase.js'; 
+import { signup, signin } from '../firebase/authentication.js'; 
 
 export default {
   inject: ['store'],
-  data() {
-    return {
-      email: '',
-      password: '',
-    };
-  },
   methods: {
     async submitForm() {
       if (this.store.count%2==0){
